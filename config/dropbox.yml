@@ -1,0 +1,16 @@
+# Dropbox Authentication System
+development:
+  app_key: "ovipiuwwdgpujlq"
+  app_secret: "cwod0ijshabnxay"
+  access_token: "5v9g2faieiseoe1k"
+  access_token_secret: "pr0bfi7hti5g07j"
+  user_id: "85108888"
+  access_type: "dropbox"
+  
+production:
+  app_key: "ovipiuwwdgpujlq"
+  app_secret: "cwod0ijshabnxay"
+  access_token: "5v9g2faieiseoe1k"
+  access_token_secret: "pr0bfi7hti5g07j"
+  user_id: "85108888"
+  access_type: "dropbox"
