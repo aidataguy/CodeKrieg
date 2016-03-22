@@ -1,8 +1,23 @@
-<div class="container">
-  <div class="col-xs-12">
-    <div class="profile-picture">
-       <%= image_tag @user.picture.url(:normal), class: "img-responsive" %>
-    </div>
-      <%= @user.username %>
+  
+<!--Start of User profile header-->
+<header>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <%= image_tag @user.picture.url(:normal), class: "img-responsive userpic", align: "center" %>
+              <div class="intro-text">
+                  <span class="name"><%= @user.username %></span>
+                  <hr class="star-light">
+                  <span class="skills">An awesome CodeKrieg user!</span>
+              </div>
+          </div>
+          <!--./ col-->
+      </div>
+      <!--./ row-->
   </div>
-</div>
+  <!--./ container-->
+</header>
+<!--./ header-->
+
+
+  

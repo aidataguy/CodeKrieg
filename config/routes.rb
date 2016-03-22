@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  # Paths
   root 'welcome#index' # root path
   
   # Authentication routes 

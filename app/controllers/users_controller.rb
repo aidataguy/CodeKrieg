@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :already_signed_in, except: [:update, :show, :destroy]
+  before_action :already_signed_in, except: [:edit, :update, :show, :destroy]
   
   def new 
     @user = User.new # Initiates the creation of the user

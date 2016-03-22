@@ -8,17 +8,18 @@ class User < ActiveRecord::Base
             uniqueness: { case_sensitive: false }, # Validates the uniqueness and its not case sensitive.
             length: { minimum: 3, maximum: 25 } # Validates the minimum and maximum characters allowed.
             
-                      # Validates the email informations with regex
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/is
-  
-  validates :email, presence: true, length: { maximum: 105 }, # Validates the user's email and its presence.
+                      # Validates the email informations with regex
+                      
+  validates :email, presence: true, length: { maximum: 105 }, # Validates the user's email, its presence and length.
             uniqueness: { case_sensitive: false }, # Validates the uniqueness and its not case sensitive.
             format: { with: VALID_EMAIL_REGEX } # Validates the format with regex
   
   has_secure_password # Validates the secure password with bcrypt. 
   
-  # User add-on
-    # Dropbox - Paperclip - Integration :
+  # User model add-ons bellow
+  
+  # Dropbox - Paperclip - Integration :
   has_attached_file :picture,
   storage: :dropbox,
   dropbox_credentials: Rails.root.join('config/dropbox.yml'),
