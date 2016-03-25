@@ -10,7 +10,26 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require bootsy
  *= require_tree .
  *= require_self
  */
+ 
+ #notices_wrap{
+   position: absolute;
+   top: 0;
+   width: 100%;
+   z-index: 9999;
+   background: rgba(124, 192, 188, 0.90);
+  // background: rgba(135, 216, 211, 0.85);
+   .notice {
+     color: #fff ;
+     padding: 3.2rem 0;
+     text-align: center;
+     font-size: 2.25rem;
+     font-weight: 700;
+     letter-spacing: 0.15em;
+
+   }
+ }
  

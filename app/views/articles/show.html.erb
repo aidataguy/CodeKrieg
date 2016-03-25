@@ -1,0 +1,57 @@
+<section class="content-2 simple col-1 col-undefined mbr-parallax-background mbr-after-navbar" id="content5-77" style="background-image: url(<%= @article.image.url(:featured) %>);">
+  <div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(0, 0, 0);"></div>
+    <div class="container">
+        <div class="row">
+            <div>
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3 class="mbr-header__text"><%= @article.title %>&nbsp;</h3>
+                        <p> { Author: <%= @article.user.username %> }</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section" id="header3-78">
+    <div class="mbr-section__container container mbr-section__container--first">
+        <div class="mbr-header mbr-header--wysiwyg row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <p class="mbr-header__subtext">
+                	Created <%= "#{time_ago_in_words(@article.created_at)}" %> ago,<br/>
+                	Last updated <%= "#{time_ago_in_words(@article.updated_at)}" %> ago
+                </p>
+                <% if @article.categories.any? %>
+									<p class="mbr-header__subtext">Categories: <%= render @article.categories %> </p>
+								<% end %>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section" id="content1-79">
+    <div class="mbr-section__container container mbr-section__container--middle">
+        <div class="row">
+            <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2">
+            	<p>
+				    <%= simple_format(@article.content) %>
+            	</p>
+			</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section" id="content1-79">
+    <div class="mbr-section__container container mbr-section__container--middle">
+        <div class="row">
+            <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2">
+            	 <h3>Comments:</h3>
+            	 <ol id="comments"> 
+				     <%= render @article.comments %>
+				 </ol>
+				<%= render 'comments/forms' %>
+			</div>
+        </div>
+    </div>
+</section>

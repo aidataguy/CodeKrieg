@@ -1,0 +1,41 @@
+footer{
+  background: #3B3738 !important;
+  width: 100%;
+  color: #fff;
+  z-index: 2;
+  padding-top: 5em;
+  position: absolute;
+  .social{
+    padding-bottom: 1em;
+  }
+  
+  i{
+      padding-left: 3em;
+      padding-right: 3em;
+      text-align: center;
+    }
+    .fa{
+      color: #fff;
+    }
+  .divider{
+    width: 33.33%;
+    text-align: center;
+  }
+  .titles{
+    padding-bottom: 1em;
+  }
+ .site-links{
+   text-align: center;
+    a{
+      text-decoration: none;
+      letter-spacing: 0.10em;
+      color: #fff;
+    }
+  }
+  
+  .footer-2{
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+}
+

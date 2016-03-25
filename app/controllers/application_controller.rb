@@ -14,14 +14,14 @@ class ApplicationController < ActionController::Base
   
   def require_user # Require a user to be logged in in order to perform certain actions
     if !logged_in?
-      flash[:danger] = "You must be logged in to perform that action"
-      redirect_to root_path
+      
+      redirect_to root_path, notice: "You must be logged in to perform that action"
     end
   end
   
   def already_signed_in # Used to restrict users from accessing Signup and Login pages.
     if logged_in? 
-      redirect_to root_path
+      redirect_to root_path, notice: "Acting Smart eh? yer already logged in "
     end
   end
 end

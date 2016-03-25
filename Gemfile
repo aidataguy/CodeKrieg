@@ -3,6 +3,10 @@ source 'https://rubygems.org'
 # Bootstrap
 gem 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.2'
 
+# Pagination
+gem 'will_paginate', '~> 3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 
@@ -29,7 +33,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'paperclip', '~> 4.3', '>= 4.3.5'
 # Paperclip-Dropbox
 gem 'paperclip-dropbox', '~> 1.3', '>= 1.3.2'
-
+# Bootsy Wysiwyg Editor
+gem 'bootsy'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

@@ -1,9 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   overflow-x: hidden;
 }
+
 
 header {
   text-align: center;
@@ -66,4 +72,8 @@ header img {
 
 .padding-top-form {
   padding-top: 9.375em;
+}
+
+.wysihtml5-sandbox{
+  height: 31.250em !important;
 }

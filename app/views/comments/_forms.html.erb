@@ -1,0 +1,18 @@
+<!-- Blog Comments -->
+  <!-- Comments Form -->
+
+  <div class="well">
+      <h4>Leave a Comment:</h4>
+      <%= form_for(@article.comments.build, html: { align: "center" }, remote: true) do |f| %>
+      <%= f.hidden_field :article_id, :value => @article.id %>
+          <div class="form-group">
+            <%= f.text_area :content, :rows => 10, :class => "span12", :placeholder => 'Enter text.' %>
+          </div>
+          <%= f.submit "Add Comment", class: "btn btn-success" %>
+      </form>
+      <% end %>
+  </div>
+  <hr>
+
+  
+  <!-- Posted Comments -->

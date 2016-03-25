@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   # Paths
   root 'welcome#index' # root path
   
@@ -10,6 +11,8 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy' # loghout path /logout
   
   # Resources
+  resources :articles 
   resources :users, except: [:new]
-  
+  resources :comments, only: [:create, :destroy]
+  resources :categories, except: [:destroy]
 end
