@@ -1,4 +1,6 @@
 class Article < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :title, use: :slugged
   
   belongs_to :user # An article belongs to an user
   has_many :comments, dependent: :destroy
@@ -10,7 +12,7 @@ class Article < ActiveRecord::Base
   validates :content, presence: true, length: {minimum: 10} # Validates the content, presence and length
   validates :user_id, presence: true # Validates the user id and its presence
   
-   # Dropbox - Paperclip - Integration :
+  # Dropbox - Paperclip - Integration :
   has_attached_file :image,
   storage: :dropbox,
   dropbox_credentials: Rails.root.join('config/dropbox.yml'),

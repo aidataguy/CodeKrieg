@@ -1,15 +1,12 @@
-<section class="content-2 simple col-1 col-undefined ck-parallax-background ck-after-navbar" id="content5-77" style="background-image: url(https://images.unsplash.com/photo-1443998486566-cc8482a99bfd?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=44dcd4904ee65db0947e2bec5ca64602);">
+<section class="content-2 simple col-1 col-undefined ck-parallax-background ck-after-navbar" id="content5-77" style="background-image: url(https://images.unsplash.com/photo-1426170042593-200f250dfdaf?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=7b6f9191e6a631a54b2e09ba6a2f06e6);">
   <div class="ck-overlay" style="opacity: 0.6; background-color: rgb(0, 0, 0);"></div>
     <div class="container">
         <div class="row">
             <div>
                 <div class="thumbnail">
                     <div class="caption">
-                        <h3>CodeKrieg's Blog</h3>
-                        <div><p>Find the latest news about our development! <br></p></div>
-                        <% @category.each do |category| %>
-													<li class="label radius tag-cloud"> <%=link_to category.name, category_path(category) %></li>
-												<% end %>
+                        <h3>CodeKrieg's Projects </h3>
+                        <div><p>Have a look at our latest projects<br></p></div>
                     </div>
                 </div>
             </div>
@@ -17,17 +14,16 @@
     </div>
 </section>
 
-<% @article.each do |article| %>
-
+<% @project.each do |project| %>
 	<section class="ck-section" id="header3-78">
 	    <div class="ck-section__container container ck-section__container--first">
 	        <div class="ck-header ck-header--wysiwyg row">
 	            <div class="col-sm-8 col-sm-offset-2">
-	                <h3 class="ck-header__text"><%= link_to article.title, article_path(article) %>&nbsp;</h3>
-	                <p class="ck-header__subtext">Author: <%= article.user.username %> </p>
+	                <h3 class="ck-header__text"><%= link_to project.project_title, project_path(project) %>&nbsp;</h3>
+	                <p class="ck-header__subtext">Author: <%= project.user.username %> </p>
 	                <p class="ck-header__subtext">
-	                	Created on <%= article.created_at.strftime("%b %e, %l:%M %p") %>,<br/>
-	                	Last updated on <%= article.updated_at.strftime("%b %e, %l:%M %p") %>
+	                	Created on <%= project.created_at.strftime("%b %e, %l:%M %p") %>,<br/>
+	                	Last updated on <%= project.updated_at.strftime("%b %e, %l:%M %p") %>
 	                </p>
 	            </div>
 	        </div>
@@ -37,9 +33,9 @@
 	<section class="ck-section" id="content1-79">
 	    <div class="ck-section__container container ck-section__container--middle">
 	        <div class="row">
-	            <div class="ck-article ck-article--wysiwyg col-sm-8 col-sm-offset-2">
+	            <div class="ck-project ck-project--wysiwyg col-sm-8 col-sm-offset-2">
 	            	<p>
-									<%= simple_format (truncate(article.content, length: 500)) { link_to "Continue", article_path(article) } %>
+									<%= truncate(project.project_content, length: 500) { link_to "Continue", project_path(project) } %>
 	            	</p>
 							</div>
 	        </div>
@@ -51,7 +47,7 @@
 	        <div class="row">
 	            <div class="col-sm-8 col-sm-offset-2">
 	                <figure class="ck-figure ck-figure--wysiwyg ck-figure--full-width ck-figure--caption-inside-bottom">
-	                    <div><%=image_tag article.image.url(:big), class: "ck-figure__img" %></div>
+	                    <div><%= image_tag project.project_image.url(:big), class: "ck-figure__img" %></div>
 	                </figure>
 	            </div>
 	        </div>
@@ -65,9 +61,9 @@
 <section class="ck-section" id="content1-79">
 	    <div class="ck-section__container container ck-section__container--middle">
 	        <div class="row">
-	            <div class="ck-article ck-article--wysiwyg col-sm-8 col-sm-offset-2">
+	            <div class="ck-project ck-project--wysiwyg col-sm-8 col-sm-offset-2">
 	            	<div align="center">
-	            		<%= will_paginate @article %>
+	            		<%= will_paginate @project %>
 	            	</div>
 							</div>
 	        </div>

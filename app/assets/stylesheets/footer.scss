@@ -3,10 +3,27 @@ footer{
   width: 100%;
   color: #fff;
   z-index: 2;
-  padding-top: 5em;
+  padding-top: 3em;
   position: absolute;
-  .social{
-    padding-bottom: 1em;
+  .fa{
+    color: #fff;
+  }
+  .social-links{
+    li{
+      display: inline-block;
+    }
+    .social{
+      color: #31B0D5;
+      font-size: 30px;
+      vertical-align: middle;
+      &:hover{
+        -webkit-transform: rotate(-10deg);
+       -moz-transform: rotate(-10deg);
+         -o-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+      }
+    }
   }
   
   i{
@@ -14,9 +31,7 @@ footer{
       padding-right: 3em;
       text-align: center;
     }
-    .fa{
-      color: #fff;
-    }
+    
   .divider{
     width: 33.33%;
     text-align: center;
@@ -34,8 +49,19 @@ footer{
   }
   
   .footer-2{
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    li.contact{
+      list-style: none;
+      text-decoration: none;
+      text-align: center;
+    }
+    li{
+      text-align: left;  
+    }
+    h4{
+      text-align: center;
+    }
   }
 }
 

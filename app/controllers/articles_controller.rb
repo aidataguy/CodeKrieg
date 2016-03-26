@@ -51,11 +51,11 @@ class ArticlesController < ApplicationController
   private
   
     def article_params
-      params.require(:article).permit(:title, :content, :image, :bootsy_image_gallery_id, category_ids: [])
+      params.require(:article).permit(:title, :content, :image, :bootsy_image_gallery_id, :slug, category_ids: [])
     end
     
     def set_article_id
-      @article = Article.find(params[:id])
+      @article = Article.friendly.find(params[:id])
     end
     
     def show_comments

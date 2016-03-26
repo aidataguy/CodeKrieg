@@ -10,7 +10,6 @@
                   <span class="icon-bar"></span>
               </button>
               
-              <!--link_to image_tag ("http://i67.tinypic.com/iz5btt.png"), class: "navbar-brand-image img-responsive" -->
               <%= link_to root_path do %>
                 <img src="http://i67.tinypic.com/iz5btt.png" class="navbar-brand img-responsive" %>
               <% end %>
@@ -20,19 +19,19 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
-                  <li class="page-scroll">
-                      <a href="#portfolio">Portfolio</a>
+                  <li>
+                      <%= link_to "Projects", projects_path %>
                   </li>
-                  <li class="page-scroll">
+                  <li>
                       <a href="#about">Services</a>
                   </li>
-                  <li class="page-scroll">
-                      <a href="#contact">The Company</a>
+                  <li>
+                      <%= link_to "The Company", company_path %>
                   </li>
-                   <li class="page-scroll">
-                      <a href="#contact">Blog</a>
+                   <li>
+                      <%= link_to "Blog", articles_path %>
                   </li>
-                  <li class="page-scroll">
+                  <li>
                       <a href="#contact">Request a quote</a>
                   </li>
                   <% if logged_in? %>

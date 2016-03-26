@@ -1,5 +1,5 @@
-<section class="content-2 simple col-1 col-undefined mbr-parallax-background mbr-after-navbar" id="content5-77" style="background-image: url(https://images.unsplash.com/photo-1414146782248-462e06300dbf?crop=entropy&fit=crop&fm=jpg&h=800&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1600);">
-  <div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(0, 0, 0);"></div>
+<section class="content-2 simple col-1 col-undefined ck-parallax-background ck-after-navbar" id="content5-77" style="background-image: url(https://images.unsplash.com/photo-1414146782248-462e06300dbf?crop=entropy&fit=crop&fm=jpg&h=800&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1600);">
+  <div class="ck-overlay" style="opacity: 0.6; background-color: rgb(0, 0, 0);"></div>
     <div class="container">
         <div class="row">
             <div>
@@ -18,13 +18,13 @@
 </section>
 
 <% @article_category.each do |article|%>
-  <section class="mbr-section" id="header3-78">
-    <div class="mbr-section__container container mbr-section__container--first">
-        <div class="mbr-header mbr-header--wysiwyg row">
+  <section class="ck-section" id="header3-78">
+    <div class="ck-section__container container ck-section__container--first">
+        <div class="ck-header ck-header--wysiwyg row">
             <div class="col-sm-8 col-sm-offset-2">
-                <h3 class="mbr-header__text"><%= link_to article.title, article_path(article) %>&nbsp;</h3>
-                <p class="mbr-header__subtext">Author: <%= article.user.username %> </p>
-                <p class="mbr-header__subtext">
+                <h3 class="ck-header__text"><%= link_to article.title, article_path(article) %>&nbsp;</h3>
+                <p class="ck-header__subtext">Author: <%= article.user.username %> </p>
+                <p class="ck-header__subtext">
                 	Created on <%= article.created_at.strftime("%b %e, %l:%M %p") %>,<br/>
                 	Last updated on <%= article.updated_at.strftime("%b %e, %l:%M %p") %>
                 </p>
@@ -33,10 +33,10 @@
     </div>
 	</section>
   
-  <section class="mbr-section" id="content1-79">
-	    <div class="mbr-section__container container mbr-section__container--middle">
+  <section class="ck-section" id="content1-79">
+	    <div class="ck-section__container container ck-section__container--middle">
 	        <div class="row">
-	            <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2">
+	            <div class="ck-article ck-article--wysiwyg col-sm-8 col-sm-offset-2">
 	            	<p>
 									<%= truncate(article.content, length: 500) { link_to "Continue", article_path(article) } %>
 	            	</p>
@@ -45,12 +45,12 @@
 	    </div>
 	</section>
   
-  <section class="mbr-section" id="image2-83">
-    <div class="mbr-section__container container mbr-section__container--middle">
+  <section class="ck-section" id="image2-83">
+    <div class="ck-section__container container ck-section__container--middle">
         <div class="row">
             <div class="col-sm-8 col-sm-offset-2">
-                <figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--caption-inside-bottom">
-                    <div><%=image_tag article.image.url(:big), class: "mbr-figure__img" %></div>
+                <figure class="ck-figure ck-figure--wysiwyg ck-figure--full-width ck-figure--caption-inside-bottom">
+                    <div><%=image_tag article.image.url(:big), class: "ck-figure__img" %></div>
                 </figure>
             </div>
         </div>
