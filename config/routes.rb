@@ -12,9 +12,8 @@ Rails.application.routes.draw do
   
   # Page routes
   get 'company', to: 'pages#company'
-  get 'founders', to: 'pages#founders'
-  get 'founders/paul', to: 'pages#paul'
-  get 'founders/himanshu', to: 'pages#himanshu'
+  get 'services', to: 'pages#services'
+  get 'quote_request', to: 'pages#quote_request'
   
   # Resources
   resources :projects

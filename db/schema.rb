@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160326182752) do
+ActiveRecord::Schema.define(version: 20160327184256) do
 
   create_table "article_categories", force: :cascade do |t|
     t.integer  "article_id"
@@ -53,7 +53,10 @@ ActiveRecord::Schema.define(version: 20160326182752) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "slug"
   end
+
+  add_index "categories", ["slug"], name: "index_categories_on_slug", unique: true
 
   create_table "comments", force: :cascade do |t|
     t.text     "content"
@@ -95,17 +98,7 @@ ActiveRecord::Schema.define(version: 20160326182752) do
 
   add_index "projects", ["slug"], name: "index_projects_on_slug", unique: true
 
-  create_table "users", force: :cascade do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "password_digest"
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
-    t.string   "picture_file_name"
-    t.string   "picture_content_type"
-    t.integer  "picture_file_size"
-    t.datetime "picture_updated_at"
-    t.boolean  "admin",                default: false
-  end
+# Could not dump table "users" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
 end

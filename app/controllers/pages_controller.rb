@@ -1,18 +1,12 @@
 class PagesController < ApplicationController
   
   def the_company 
-    
   end
   
-  def founders
-    
+  def services
   end
   
-  def paul
-    
-  end
-  
-  def himanshu
+  def quote_request
     
   end
   

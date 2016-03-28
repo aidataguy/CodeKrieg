@@ -39,16 +39,16 @@ class CommentsController < ApplicationController
   # end
   
   def destroy
-    @comment = Comment.find(params[:id])
-    @article = @comment.article
-    @comment.destroy
-    redirect_to article_path(@article)
+    @comment = Comment.find(params[:id]) # Find the comment
+    @article = @comment.article # Identify it as a comment on the article
+    @comment.destroy # Destroy it
+    redirect_to article_path(@article) # Redirect to the article page
   end
 
   private
     
     def comment_params
-      params.require(:comment).permit(:content)
+      params.require(:comment).permit(:content) # Require the comment in the params and permit the content
     end
     
     def require_login
@@ -57,4 +57,4 @@ class CommentsController < ApplicationController
       end
     end
     
-  end
+end

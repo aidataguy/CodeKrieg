@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :require_admin, except: [:index, :show] # Before any action require the user to be admin
+  before_action :set_category_id, only: [:show, :edit, :update, :destroy]
   
   def index
     @categories = Category.all.order("created_at desc").paginate(:page => params[:page], :per_page => 20) # (paginate(page: params[:page], per_page: 5))Renders the categories on the index page. Changes might be needed 
@@ -19,11 +20,9 @@ class CategoriesController < ApplicationController
   end
   
   def edit
-    @category = Category.find(params[:id]) # Initiates the edit of the category by finding it within the params
   end
   
-  def update
-    @category = Category.find(params[:id]) # Initiates the edit of the category by finding it within the params
+  def update # Initiates the edit of the category by finding it within the params
     if @category.update(category_params) # If the category can be updated
       redirect_to category_path(@category), notice: "Category name was successfully updated" # redirect to the category page
     else # If the category can not be updated
@@ -33,15 +32,18 @@ class CategoriesController < ApplicationController
   end
   
   def show
-    @category = Category.find(params[:id]) # Find the category by its params id
     @article_category = @category.article.paginate(page: params[:page], per_page: 5) # Renders the articles that match the category
                                                                                      # Might not be needed
   end
   
   private 
   
+  def set_category_id
+    @category = Category.friendly.find(params[:id]) # Find the category by its params id
+  end
+  
   def category_params
-    params.require(:category).permit(:name)
+    params.require(:category).permit(:name, :slug)
   end
   
   def require_admin

@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :already_signed_in, except: [:edit, :update, :show, :destroy]
+  before_action :user_id, only: [:show, :edit, :update, :destroy]
   
   def new 
     @user = User.new # Initiates the creation of the user
@@ -18,11 +19,9 @@ class UsersController < ApplicationController
   end
   
   def edit
-    @user = User.find(params[:id])
   end
   
   def update
-    @user = User.find(params[:id])
     if @user.update(user_params)  # If the user can be updated, update the informations.
       
       redirect_to root_path, notice: "Your account has been updated successfully" # After everything is finished, redirect the user to a certain page
@@ -34,19 +33,21 @@ class UsersController < ApplicationController
   def show
     # Possible wanted code: 
       # @user_articles = @user.articles.paginate(page: params[:page], per_page: 5)
-      @user = User.find(params[:id])
   end
   
   def destroy 
-    @user = User.find(params[:id]) # Find the user by ID
     @user.destroy # Destroy the user User flash to display a message for the user
     redirect_to root_path, notice: "User and all articles created by user have been deleted" # After everything is finished, redirect the user to a certain page
   end
   
   
   private
+  
+  def user_id
+    @user = User.friendly.find(params[:id])
+  end  
     
   def user_params 
-      params.require(:user).permit(:username, :email, :password, :picture) # Require the user params needed to submit a post.
+      params.require(:user).permit(:username, :email, :password, :picture, :slug) # Require the user params needed to submit a post.
   end
 end

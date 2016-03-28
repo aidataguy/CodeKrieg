@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
   
+  extend FriendlyId
+  friendly_id :username, use: :slugged
+  
   # User model maintenance 
   before_save { self.email = email.downcase } # Once the user is saved the email will be downcased for easier maintenance.
   

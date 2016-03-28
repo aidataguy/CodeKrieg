@@ -9,13 +9,16 @@ footer{
     color: #fff;
   }
   .social-links{
-    li{
-      display: inline-block;
-    }
+     h4{
+       text-align: center;
+     }
+     li{
+       text-align: center;
+     }
     .social{
+      width: 170px;
       color: #31B0D5;
-      font-size: 30px;
-      vertical-align: middle;
+      // font-size: 30px;
       &:hover{
         -webkit-transform: rotate(-10deg);
        -moz-transform: rotate(-10deg);
@@ -36,15 +39,15 @@ footer{
     width: 33.33%;
     text-align: center;
   }
-  .titles{
-    padding-bottom: 1em;
-  }
  .site-links{
    text-align: center;
     a{
       text-decoration: none;
       letter-spacing: 0.10em;
       color: #fff;
+      &:hover{
+        color: #777;
+      }
     }
   }
   
@@ -62,6 +65,12 @@ footer{
     h4{
       text-align: center;
     }
+    .contact{
+      i{
+        font-weight: 600;
+      }
+    }
   }
+  
 }
 
