@@ -15,6 +15,10 @@ Rails.application.routes.draw do
   get 'services', to: 'pages#services'
   get 'quote_request', to: 'pages#quote_request'
   
+  # Legal routes
+  get 'tos', to: 'pages#tos'
+  get 'privacy', to: 'pages#privacy'
+  
   # Resources
   resources :projects
   resources :articles 

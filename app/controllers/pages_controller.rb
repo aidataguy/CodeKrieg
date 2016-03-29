@@ -7,7 +7,9 @@ class PagesController < ApplicationController
   end
   
   def quote_request
-    
+  end
+  
+  def tos
   end
   
 end
