@@ -24,4 +24,5 @@ class ApplicationController < ActionController::Base
       redirect_to root_path, notice: "Acting Smart eh? yer already logged in "
     end
   end
+  
 end

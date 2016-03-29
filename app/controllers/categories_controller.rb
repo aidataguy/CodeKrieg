@@ -47,9 +47,11 @@ class CategoriesController < ApplicationController
   end
   
   def require_admin
-    if !logged_in? and current_user != "admin"
-      redirect_to root_path, notice: "Only admin accounts can perform that action!"
+    if !logged_in?
+       redirect_to root_path, notice: "Only admin accounts can perform that action!" 
+    elsif !current_user.admin?
+       redirect_to root_path, notice: "Only admin accounts can perform that action!" 
     end
   end
-  
+
 end

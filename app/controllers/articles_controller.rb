@@ -63,10 +63,12 @@ class ArticlesController < ApplicationController
     
     def article_users
   	  @user = User.all
-  	end
+    end
   	
-  	def require_admin
-      if !logged_in? and current_user != "admin"
+    def require_admin
+      if !logged_in?
+         redirect_to root_path, notice: "Only admin accounts can perform that action!" 
+      elsif !current_user.admin?
          redirect_to root_path, notice: "Only admin accounts can perform that action!" 
       end
     end
