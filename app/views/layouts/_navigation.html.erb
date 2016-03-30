@@ -32,7 +32,7 @@
                       <%= link_to "Blog", articles_path %>
                   </li>
                   <li>
-                      <a href="#contact">Request a quote</a>
+                      <%= link_to "Request A Quote", new_contact_path %>
                   </li>
                   <% if logged_in? %>
                     <li><%= link_to 'Log out', logout_path, method: :delete %></li>
