@@ -50,7 +50,11 @@
             	 <ol id="comments"> 
 				     <%= render @article.comments %>
 				 </ol>
-				<%= render 'comments/forms' %>
+				 <% if logged_in? %>
+				     <%= render 'comments/forms' %>
+				 <% else %>
+				     <p align="center"> Please <%= link_to "sign in", login_path %> or <%= link_to "sign up", signup_path %> to be able to comment! </p>
+				 <% end %>
 			</div>
         </div>
     </div>

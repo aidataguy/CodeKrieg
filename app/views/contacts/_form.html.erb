@@ -15,11 +15,12 @@
       </div>
     <% end %>
 
-    <%= form_for @contact, :html => { multipart: true, :class => "form-horizontal build" } do |f| %>
+    
  
 <!-- Form Name -->
-<legend>Contact Us Today!</legend>
+<legend class="text-center">Contact Us Today!</legend>
 
+<%= form_for @contact, :html => { multipart: true, :class => "form-horizontal build" } do |f| %>
 <!-- Text input-->
 
 <div class="form-group">
