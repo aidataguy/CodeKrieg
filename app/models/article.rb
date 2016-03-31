@@ -1,7 +1,6 @@
 class Article < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
-  
   belongs_to :user # An article belongs to an user
   has_many :comments, dependent: :destroy
   
@@ -22,4 +21,10 @@ class Article < ActiveRecord::Base
     unique_filename: true
   }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+  
+  # protected 
+  
+  # def clean_input
+  #   self.input = sanitize(self.input, :tags => %w(h1 h2 h3 h4 h5 h6 p b i u))
+  # end
 end
