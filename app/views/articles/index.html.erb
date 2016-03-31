@@ -39,7 +39,7 @@
 	        <div class="row">
 	            <div class="ck-article ck-article--wysiwyg col-sm-8 col-sm-offset-2">
 	            	<p>
-									<%= simple_format (truncate(article.content, length: 500)) { link_to "Continue", article_path(article) } %>
+									<%= simple_format sanitize(truncate(article.content, length: 500)) { link_to "Continue", article_path(article) } %>
 	            	</p>
 							</div>
 	        </div>
