@@ -38,7 +38,9 @@
                     <li><%= nav_link "Blog", articles_path %></li>
                     <li><%= nav_link "The Company", company_path %></li>
                     <li><%= nav_link "Request A Quote", new_contact_path %></li>
-                    <li><%= link_to "Logout", logout_path, method: :delete %></li>
+                    <% if logged_in?%>
+                        <li><%= link_to "Logout", logout_path, method: :delete %></li>
+                    <% end %>
                 </ul>
             </div>
         </div>

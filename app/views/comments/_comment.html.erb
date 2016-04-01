@@ -9,7 +9,7 @@
         <% if logged_in? && (@article.user == current_user || current_user.admin?) %>
           <%= link_to "Delete", comment_path(comment), method: :delete, class:"btn btn-xs btn-danger "%>
         <% end %>
-        <%= simple_format(comment.content) %>
+        <%= simple_format(sanitize comment.content) %>
         <hr>
     </div>
 </div>
