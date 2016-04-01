@@ -1,73 +1,61 @@
-<footer>
-  <div class="container footer-2">
-    <div class="row">
-      <div class="col-xs-12 col-md-6 col-lg-6">
-        <h4>Contact Us</h4>
-        <hr class="divider"></hr>
-        <div class="locate">
-          <li class="contact"><i class="fa fa-1x fa-map-marker">
-             Italy - India
-          </i>
-          </li>
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center bottom-separator">
+              <hr>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                           
           
-          <li class="contact">
-          <i class="fa fa-1x fa-skype">
-             codekrieg
-          </i>
-          </li>
-          
-          <li class="contact">
-            <i class="fa fa-1x fa-phone"> India: <%= number_to_phone(9589109340, country_code: 91) %> </i>
-            <i class="fa fa-1x fa-phone"> Italy: <%= number_to_phone(3894355390, country_code: 39) %> </i>
-          </li>
-        </div>
-      </div>
-      
-      <div class="col-xs-12 col-md-6 col-lg-6">
-            <h4 class="titles">We are social</h4>
-            <hr class="divider"></hr>
-          <div class="social-links">
-            <ul class="list-inline text-center">
-               <li class="list-unstyled social"> 
-                 <%= link_to "https://twitter.com/CodeKrieg" do %>
-                  <i class="fa fa-twitter fa-2x"></i>
-                 <% end %>
-              </li>
-              <li class="list-unstyled social"> 
-                <%= link_to "https://www.facebook.com/codekriegdev" do %>
-                  <i class="fa fa-facebook fa-2x"></i>
-                <% end %>
-              </li>
-              <li class="list-unstyled social">
-              <%= link_to "https://github.com/CodeKrieg" do %>
-                <i class="fa fa-github fa-2x"></i>
-              <% end %>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <hr class="divider"></hr>
-  </div>
-  <div class="container">
-    <div class="row">
-    <div class="col-xs-12 col-lg-12 col-md-12">
-        <ul class="site-links list-inline">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Portfolio", projects_path %></li>
-          <li><%= link_to "Services", services_path%></li>
-          <li><%= link_to "The Company", company_path%></li>
-          <li><%= link_to "Blog", articles_path%></li>
-          <li><%= link_to "Request A Quote",  new_contact_path %></li>
-        </ul>
-      </div>
-      <div class="copyright">
-        <p class="text-center"> &copy All Rights Reserved <%= Time.now.year%>, <%= link_to "CodeKrieg", root_path %></p>
-        <p class="text-center">
-          <%= link_to "Terms And Conditions", tos_path %> <%= link_to "Privacy Policy", privacy_path %> 
-        </p>
-      </div>
-      </div>
-  </div>
-</footer>
+                <!--<div class="testimonial bottom">-->
+                <!--    <h2>Testimonial</h2>-->
+                <!--    <div class="media">-->
+                <!--        <div class="media-body">-->
+                <!--            <blockquote>Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat labore tail.</blockquote>-->
+                <!--            <h3><a href="#">- Jhon Kalis</a></h3>-->
+                <!--        </div>-->
+                <!--     </div>-->
+                <!--    <div class="media">-->
+                <!--        <div class="media-body">-->
+                <!--            <blockquote>Capicola nisi flank sed minim sunt aliqua rump pancetta leberkas venison eiusmod.</blockquote>-->
+                <!--            <h3><a href="">- Abraham Josef</a></h3>-->
+                <!--        </div>-->
+                <!--    </div>   -->
+                <!--</div> -->
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="contact-info bottom">
+                    <h2>Contacts</h2>
+                    <address>
+                    E-mail: <a href="mailto:hey@codekrieg.com">hey@codekrieg.com</a> <br> 
+                    Phone 1: +39 389 435 5390 <br>
+                    Phone 2: +91 958 910 9340
+                    </address>
 
+                    <h2>Address</h2>
+                    <address>
+                    Via Giuseppe Benedetto Dusmet, 
+                    16, 001678 <br> 
+                    Lazio, <br> 
+                    Rome <br> 
+                    </address>
+
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="contact-form bottom">
+                     <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/CodeKrieg" data-widget-id="715930445209161728">Tweets by @CodeKrieg</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="copyright-text text-center">
+                    <p>&copy; All Rights Reserved <%= Time.now.year%>, <%= link_to "CodeKrieg", root_path %></p>
+                    <p><%= link_to "Terms And Conditions", tos_path %> <%= link_to "Privacy Policy", privacy_path %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--/footer-->
+         

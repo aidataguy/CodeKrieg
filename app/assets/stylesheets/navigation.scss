@@ -1,97 +1,134 @@
-@media (max-width: 990px) {
-  .navbar-fixed-top {
-    padding: 0.5em 0;
-    -webkit-transition: padding 0.3s;
-    -moz-transition: padding 0.3s;
-    transition: padding 0.3s;
-  }
-  .navbar-fixed-top .navbar-brand {
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  .navbar-fixed-top.navbar-shrink {
-    padding: 0.5em 0;
-  }
-  .navbar-nav > li > a{
-    padding-top: 15px;
-    padding-bottom: 10px;
-    font-size: 0.75em;
-  }
+#header{
+  margin-bottom: 0;
+  padding: 30px 0 60px 0;
 }
 
-@media (min-width: 768px) {
-  .navbar-fixed-top {
-    padding: 0.3em 0;
-    -webkit-transition: padding 0.3s;
-    -moz-transition: padding 0.3s;
-    transition: padding 0.3s;
-  }
-  .navbar-fixed-top .navbar-brand {
-    font-size: 1em;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  .navbar-fixed-top.navbar-shrink .navbar-brand {
-    font-size: 1.0em;
-  }
+#header .navbar-inverse .container{
+  position: relative;
 }
 
-@media (max-width: 768px) {
-  img.navbar-brand {
-  margin-top: -0.10em;
-  }
-  button.navbar-toggle{
-    margin-top: 2.5em;
-  }
+.search{
+  position: absolute;
+  top: 20px;
+  right: 0;
+  z-index: 1;
 }
 
+.search i{
+  color: #00aeef;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 2px;
+}
 
-.navbar {
+.field-toggle{
+  position: relative;
+  top: 30px;
+  right: 15px;
+  display: none;
+  height: 50px;
+}
+
+.search-form{
+  padding-left: 10px;
+  height: 40px;
+  font-size: 18px;
+  color: #818285;
+  font-weight: 300;
+  outline: none;
+  border: 1px solid #00aeef;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+.social-icons ul li{
+  padding: 0 10px;
+
+}
+
+.social-icons ul li:last-child{
+  padding-right: 0;
+
+}
+
+.social-icons ul li a{
+  font-size: 18px;
+  color: #d3d3d3;
+  padding: 0;
+}
+
+.social-icons ul li a:hover .fa-facebook {
+  color:#0884d5;
+}
+
+.social-icons ul li a:hover .fa-twitter {
+  color:#2AA7DC;
+}
+
+.social-icons ul li a:hover .fa-google-plus {
+  color:#A22523;
+}
+
+.social-icons ul li a:hover .fa-dribbble {
+  color:#E94989;
+}
+
+.social-icons ul li a:hover .fa-linkedin {
+  color:#006DC0;
+}
+
+.social-icons ul li a:hover .fa-github {
+  color:#4078c0;
+}
+
+.social-icons ul li a:hover,
+.social-icons ul li a:focus{
+  background: none;
+}
+
+#header .navbar {
+  background: #fff;
+  border: 0;
+  margin-bottom: 0;
+}
+
+#header .navbar-toggle{
+  margin-top: 20px;
+}
+
+#header .navbar-brand{
+  padding: 0;
+  margin-left: 0;
+}
+
+#header .navbar-brand h1{
+  padding: 0;
+  margin: 0;
+}
+
+#header .navbar-nav.navbar-right >li:last-child{
+  margin-right: 20px;
+}
+
+#header .navbar-nav.navbar-right >li a {
+  color: #000;
+  font-size: 12px;
+  padding: 20px;
   text-transform: uppercase;
-  font-weight: 700;
-}
-.navbar a:focus {
-  outline: none;
-}
-.navbar .navbar-nav {
-  letter-spacing: 1px;
-}
-.navbar .navbar-nav li a:focus {
-  outline: none;
+  font-weight: 300;
 }
 
-.navbar .navbar-nav li a {
-  color: #FFF !important;
-  padding-top: 3em;
+
+#header .navbar-inverse .navbar-nav  li.active > a,
+#header .navbar-inverse .navbar-nav  li.active > a:focus,
+#header .navbar-nav.navbar-right li > a:hover,
+.navbar-inverse .navbar-nav > .open > a {
+  background-color: inherit;
+  border: 0;
+  color: #00aeef;
 }
 
-.ck-buttons__btn_nav{
-  margin-top: -0.5em !important;
-}
-
-.navbar .navbar-nav li a:hover {
-  color: #B8B8B8 !important;
-}
-
-.navbar-default .navbar-brand {
-  color: #FFF !important;
-}
-
-.navbar-default .navbar-brand:hover {
-  color: #B8B8B8 !important;
-}
-
-.navbar-default,
-.navbar-inverse {
-  border: none;
-  background-color: #3B3738;
-}
-
-img.navbar-brand {
-  margin-top: -0.10em;
-  width: 200px;
-  height: 100px;
-  overflow: hidden;
+#header .navbar-inverse .navbar-nav  li a:hover{
+  color: #00aeef;
 }

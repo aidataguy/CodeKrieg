@@ -13,8 +13,6 @@ Rails.application.routes.draw do
   # Page routes
   get 'company', to: 'pages#company'
   get 'services', to: 'pages#services'
-  get 'quote_request', to: 'pages#quote_request'
-  
   # Legal routes
   get 'tos', to: 'pages#tos'
   get 'privacy', to: 'pages#privacy'

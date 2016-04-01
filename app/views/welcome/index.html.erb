@@ -1,185 +1,150 @@
-<section class="ck-box ck-section ck-section--relative ck-section--fixed-size ck-section--full-height ck-section--bg-adapted ck-after-navbar" id="background-vid">
-    <div class="ck-box__magnet ck-box__magnet--sm-padding ck-box__magnet--center-left">
-        <div class="ck-overlay" style="opacity: 0.6; background-color: rgb(76, 105, 114);"></div>
-        <div class="ck-box__container ck-section__container container">
-            <div class="ck-box ck-box--stretched"><div class="ck-box__magnet ck-box__magnet--center-left">
-                <div class="row">
-                  <div class=" col-sm-12">
-                    <div class="ck-hero animated fadeInUp">
-                        <h1 align="center" class="ck-hero__text">CodeKrieg</h1>
-                        <p align="center" class="ck-hero__subtext">A Ruby on Rails Development Company</p>
-                    </div>
-                  </div>
+<section id="first-section">
+    <div class="container">
+        <div class="row">
+            <div class="first-section-text">
+                <div align="center">
+                    <h1>We Are <span class="ror-color">CodeKrieg</span></h1>
+                    <p>A Ruby on Rails Development Company</p>
+                    <a href="#" class="btn btn-common">FIND MORE</a>
                 </div>
-            </div></div>
-        </div>
-        <div class="ck-arrow ck-arrow--floating text-center">
-            <div class="ck-section__container container">
-                <a class="ck-arrow__link" href="#features1-42"><i class="glyphicon glyphicon-menu-down"></i></a>
             </div>
         </div>
     </div>
+    <!--<div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>-->
 </section>
+<!--/first section-->
 
-<section class="ck-section ck-section--relative ck-section--fixed-size" id="about">
-    <div class="ck-section__container container ck-section__container--isolated">
-            
-        <div class="col-sm-8 col-sm-offset-2">
-            <div class="ck-section__container ck-section__container--middle">
-                <div class="ck-header ck-header--auto-align ck-header--wysiwyg">
-                    <h3 align="center" class="ck-header__text">Who We Are</h3>
-                    <hr class="ck-divider"></hr>
-                </div>
-            </div>
-            
-            <div class="ck-section__container ck-section__container--middle">
-                <div class="ck-article ck-article--auto-align ck-article--wysiwyg">
+<section id="services">
+    <div class="container">
+        <h1 align="center">We offer...</h1>
+        <div class="row">
+            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <div class="single-service">
+                    <h2>Responsive Design</h2>
                     <p>
-                     Young start-up that has its main focus on software development for web applications. 
-                     <br/>
-            	     Our main objective is to fulfill our customers' plans and contribute to the well being of the <strong>World Wide Web</strong>. 
-            	     </br>
-            	     We are currently using a lot of powerful assets, but the most important ones are <strong>Ruby</strong> and <strong>Ruby on Rails</strong>.
-            	    </p>
+                        By working with today's most used front-end, and home-made, technologies, CodeKrieg creates beautiful and responsive designs!
+                    </p>
                 </div>
             </div>
-            
-            <div class="ck-section__container">
-                <div class="ck-section__container">
-                    <div align="center">
-                        <%= link_to "Find More", company_path, class: "ck-buttons__btn btn btn-lg btn-danger" %>
+            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+                <div class="single-service">
+                    <h2>Maintainable Software</h2>
+                    <p>
+                        Be it SaaS, CMS, eCommerce or just a simple website, CodeKrieg can create all of those. 
+                        We are software writters, writing maintainable and error-free code is our main objective!
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
+                <div class="single-service">
+                    <h2>Friendly Consultancy & Support</h2>
+                    <p>
+                        We know how frustrating it is to encounter problems with your software. 
+                        That is why all of your clients receive free consultancy and support (even after our contract is done!)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/services-->
+
+<section id="action" class="responsive">
+    <div>
+         <div align="center" class="container">
+            <div class="row">
+                    <div class="col-sm-12  wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <h1 class="title">Have you heard enough?</h1>
+                        <p>Are you in a hurry &amp; need a professional team to get your web application up and running?.</p>
+                        <%= link_to "HIRE US TODAY", new_contact_path, class: "btn btn-common" %>
                     </div>
-                 </div>
-            </div>
-        </div>
-        
-    </div
-</section>
-
-<section class="ck-section ck-section--relative ck-section--fixed-size" id="services">
-    <div class="ck-section__container container ck-section__container--isolated">
-            
-        <div class="col-sm-8 col-sm-offset-2">
-            <div class="ck-section__container ck-section__container--middle">
-                <div class="ck-header ck-header--auto-align ck-header--wysiwyg">
-                    <h3 align="center" class="ck-header__text">What We Offer</h3>
-                    <hr class="ck-divider"></hr>
-                </div>
-            </div>
-            
-            <div class="ck-section__container ck-section__container--middle">
-                <div class="ck-article ck-article--auto-align ck-article--wysiwyg">
-                   <div class="contianer-fluid">
-                       <div class="row">
-                           <div class="col-xs-12 col-md-4 col-lg-4">
-                                   <div align="center">
-                                      <span class="fa-stack-2x fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-desktop fa-stack fa-inverse"></i>
-                                      </span>
-                                   </div>
-                                   <h4>Web Design</h4>
-                                       <li>Responsive</li>
-                                       <li>Clean</li>
-                                       <li>User Friendly</li>
-                                       <li>Awesome</li>
-                           </div>  
-                          
-                           <div class="col-xs-12 col-md-4 col-lg-4">
-                               <div align="center">
-                                  <span class="fa-stack-2x fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-cog fa-spin fa-stack fa-inverse"></i>
-                                  </span>
-                               </div>
-                               <h4>Web Development</h4>
-                                   <li>Ruby On Rails</li>
-                                   <li>Node JS</li>
-                                   <li>MongoDB</li>
-                                   <li>MySQL/Postgres</li>
-                           </div>  
-                           <div class="col-xs-12 col-md-4 col-lg-4">
-                                <div align="center">
-                                    <span class="fa-stack-2x fa-lg">
-                                      <i class="fa fa-circle fa-stack-2x"></i>
-                                      <i class="fa fa-flag fa-stack fa-inverse"></i>
-                                    </span>
-                                </div>
-                                <h4>Consultancy &amp; Support</h4>
-                                    <li>Hosting &amp; Installation</li>
-                                    <li>Migration Support</li>
-                                    <li>Email/phone support</li>
-                                    <li>Application Security Consulting</li>
-                       </div>
-                       
-                       <div class="row">
-                           <div class="col-xs-12 padding-top-what-we-offer-button">
-                               <div align="center">
-                                   <%= link_to "Learn More", services_path, class: "ck-buttons__btn btn btn-lg btn-danger" %>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   
-                </div>
             </div>
         </div>
     </div>
 </section>
+<!--/call to action-->
 
 
-<section id="portfolio" class="ck-section ck-section--relative ck-section--fixed-size our-work">
-    <div class="ck-section__container container ck-section__container--isolated">
-        <div class="col-sm-8 col-sm-offset-2">
-            <div class="ck-section__container ck-section__container--middle">
-                <div class="ck-header ck-header--auto-align ck-header--wysiwyg">
-                    <h3 align="center" class="ck-header__text">Our Work</h3>
-                    <hr class="ck-divider"></hr>
+<section id="features">
+    <div class="container">
+        <div class="row">
+            
+            <div class="single-features">
+                <div class="col-sm-5">
+                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <%= image_tag('landing.png') %>
+                    </div>
+                </div>
+                <div class="col-sm-6 padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <h2>Young and Experienced</h2>
+                    <p>
+                        At CodeKrieg all of our programmers are young and have a lot of experience working with software development. <br>
+                        Following the path of 37 Signals, we all work remote!
+                    </p>
                 </div>
             </div>
+            
+            <div class="single-features">
+                <div class="col-sm-6 col-sm-offset-1 align-right wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <h2>Ready and Enthusiastic</h2>
+                        <p>
+                        Our programmers are always ready to work with you! <br>
+                        Enthusiasm is one our biggest qualities when working on new projects, beside outstanding software, of course. 
+                        </p>
+                </div>
+                <div class="col-sm-5 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                   <%= image_tag('landing2.png') %>
+                </div>
+            </div>
+            
+            <div class="single-features">
+                <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                   <%= image_tag('landing3.png') %>
+                </div>
+                <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                    <h2>Innovative and Capable </h2>
+                    <p>
+                        Have you ever went to somebody and they said that your idea is bad? <br>
+                        Not us, we love to work with new ideas and innovative concepts! 
+                    </p>
+                </div>
+            </div>
+            
         </div>
-            <div class="row no-gutters">
-            <% @projects.each do |project| %>    
-                 <div class="col-md-4 col-xs-6 col-lg-4 portfolio-item">
-                    <%= link_to  project_path(project), class:"portfolio-link" do %>
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search fa-3x"></i>
-                            </div>
-                        </div>
-                        <%= image_tag project.project_image.url(:featured), class: "img-responsive" %>
-                    <% end %>
-                </div>
-                <% end %>     
-            </div>
-        </div>
-        
-</section>
-
-<section id="blog-posts" class="ck-section ck-section--relative ck-section--fixed-size our-blog-posts">
-    <div class="ck-section__container container ck-section__container--isolated">
-        <div class="col-sm-8 col-sm-offset-2">
-            <div class="ck-section__container ck-section__container--middle">
-                <div class="ck-header ck-header--auto-align ck-header--wysiwyg">
-                    <h3 align="center" class="ck-header__text">Latest Blog Posts</h3>
-                    <hr class="ck-divider"></hr>
-                </div>
-            </div>
-        </div>
-         <div class="row no-gutters">
-            <% @articles.each do |article| %>        
-                 <div class="col-lg-6 col-md-6 col-xs-6 article-item">
-                     <%= link_to  article_path(article), class:"article-link" do %>
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-link fa-3x"><br /><h4><%= article.title %></h4></i>
-                            </div>
-                        </div>
-                        <%= image_tag article.image.url(:featured), class: "img-responsive" %>      
-                    <% end %>
-                </div>
-            <% end %>                     
-            </div>
     </div>
-    
 </section>
+
+<section id="clients">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="clients text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+                    <h1 class="title">Happy Clients</h1>
+                    <p>We love our clients, we also want them to be happy, that is why we work our hardest to bring high quality products for them!</p>
+                    <%= link_to "Check Out Our Projects", projects_path, class: "btn btn-common" %>
+                </div>
+                <!--<div class="clients-logo wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">-->
+                <!--    <div class="col-xs-3 col-sm-2">-->
+                <!--        <a href="#"><img src="images/home/client1.png" class="img-responsive" alt=""></a>-->
+                <!--    </div>-->
+                <!--    <div class="col-xs-3 col-sm-2">-->
+                <!--        <a href="#"><img src="images/home/client2.png" class="img-responsive" alt=""></a>-->
+                <!--    </div>-->
+                <!--     <div class="col-xs-3 col-sm-2">-->
+                <!--        <a href="#"><img src="images/home/client3.png" class="img-responsive" alt=""></a>-->
+                <!--    </div>-->
+                <!--     <div class="col-xs-3 col-sm-2">-->
+                <!--        <a href="#"><img src="images/home/client4.png" class="img-responsive" alt=""></a>-->
+                <!--    </div>-->
+                <!--     <div class="col-xs-3 col-sm-2">-->
+                <!--        <a href="#"><img src="images/home/client5.png" class="img-responsive" alt=""></a>-->
+                <!--    </div>-->
+                <!--     <div class="col-xs-3 col-sm-2">-->
+                <!--        <a href="#"><img src="images/home/client6.png" class="img-responsive" alt=""></a>-->
+                <!--    </div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+ </section>
+<!--/clients-->

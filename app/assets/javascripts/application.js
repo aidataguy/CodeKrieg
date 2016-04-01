@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
 //= require bootsy
 //= require twitter/bootstrap
 //= require_tree .
@@ -79,13 +80,33 @@ $(document).ready(function(){
   });
 });
 
-$(document).ready(function(){
-	$('#background-vid').tubular({
-		videoId: 'qxCJ6QMfMe8',
-	   // ratio: 16/9, // usually either 4/3 or 16/9 -- tweak as needed
-    	mute: true,
-    	repeat: true,
-    	wrapperZIndex: 1,
-	    start: 0, // starting position in seconds
-	}); // where idOfYourVideo is the YouTube ID. }); 
-});
+
+// $(document).ready(function(){
+// 	$('#background-vid').tubular({
+// 		videoId: 'qxCJ6QMfMe8',
+// 	   // ratio: 16/9, // usually either 4/3 or 16/9 -- tweak as needed
+//     	mute: true,
+//     	repeat: true,
+//     	wrapperZIndex: 1,
+// 	    start: 0, // starting position in seconds
+// 	}); // where idOfYourVideo is the YouTube ID. }); 
+// });
+
+$( document ).ready(function (){
+/* global wow */
+var wow = new WOW(
+  {
+    boxClass:     'wow',      // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset:       0,          // distance to the element when triggering the animation (default is 0)
+    mobile:       true,       // trigger animations on mobile devices (default is true)
+    live:         true,       // act on asynchronously loaded content (default is true)
+    callback:     function(box) {
+      // the callback is fired every time an animation is started
+      // the argument that is passed in is the DOM node being animated
+    },
+    scrollContainer: null // optional scroll container selector, otherwise use window
+  }
+);
+wow.init();
+ });

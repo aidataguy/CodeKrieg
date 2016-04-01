@@ -1,48 +1,46 @@
-<!-- Navigation -->
-  <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              
-              <%= link_to root_path do %>
-                <img src="http://i67.tinypic.com/iz5btt.png" class="navbar-brand img-responsive" %>
-              <% end %>
-              
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
-                  <li>
-                      <%= link_to "Projects", projects_path %>
-                  </li>
-                  <li>
-                      <%= link_to "Services", services_path %>
-                  </li>
-                  <li>
-                      <%= link_to "The Company", company_path %>
-                  </li>
-                   <li>
-                      <%= link_to "Blog", articles_path %>
-                  </li>
-                  <li>
-                      <%# link_to "Request A Quote", new_contact_path, class: "ck-buttons__btn btn btn-success"%>
-                      <%= link_to new_contact_path do %>
-                        <button class="ck-buttons__btn_nav btn btn-success">Request A Quote</button>
-                      <% end %>
-                  </li>
-                  <% if logged_in? %>
-                    <li><%= link_to 'Log out', logout_path, method: :delete %></li>
-                  <% end %>
-              </ul>
-          </div>
-          <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container-fluid -->
-  </nav
+<header id="header">      
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 overflow">
+               <div class="social-icons pull-right">
+                    <ul class="nav nav-pills">
+                        <li><a href="https://www.facebook.com/codekriegdev"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/codekrieg"><i class="fa fa-twitter"></i></a></li>
+                        <!--<li><a href=""><i class="fa fa-google-plus"></i></a></li>-->
+                        <!--<li><a href=""><i class="fa fa-dribbble"></i></a></li>-->
+                        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/CodeKrieg"><i class="fa fa-github"></i></a></li>
+                    </ul>
+                </div> 
+            </div>
+         </div>
+    </div>
+    <div class="navbar navbar-inverse" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+    
+                <a class="navbar-brand" href="<%= root_path %>">
+                    <h1>CodeKrieg</h1>
+                </a>
+                
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><%= nav_link "Home", root_path %></li>
+                    <li><%= nav_link "Services", services_path %></li>
+                    <li><%= nav_link "Projects", projects_path %></li>
+                    <li><%= nav_link "Blog", articles_path %></li>
+                    <li><%= nav_link "The Company", company_path %></li>
+                    <li><%= nav_link "Request A Quote", new_contact_path %></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!--/navigation-->
