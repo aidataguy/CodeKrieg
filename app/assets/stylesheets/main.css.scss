@@ -336,3 +336,22 @@ h3{
   overflow: hidden;
   margin-bottom: 10px;
 }
+
+#share_box{
+  text-align: center;
+  p{
+    text-transform: uppercase;
+  }
+  
+  i{
+    font-weight: 600;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 1.2em 1.5em;
+    vertical-align: middle;
+    &:hover{
+      color: #686868;
+      cursor: pointer;
+    }
+    }
+  }    
