@@ -68,8 +68,8 @@ group :development do
   gem 'spring'
 end
 
-group :production do 
-  gem 'unicorn'
-  gem 'mysql2'
+group :production do
+  gem 'pg'
+  gem 'puma'
 end
 
