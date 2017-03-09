@@ -16,8 +16,6 @@ gem 'friendly_id', '~> 5.1'
 #Twitter Gem
 gem 'twitter'
 
-# AWS SDK RAILS
-gem 'aws-sdk-rails', '~> 1.0'
 gem 'execjs'
 gem 'therubyracer'
 
